@@ -1,38 +1,250 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+  font-family: 'Prosto One', cursive;
+    box-sizing: border-box;
+    color: #fff;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background:#171717;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    margin:20px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.clip-board{
+    background:#191919;
+    width:600px;
+    padding:10px;
+    box-shadow:0px 10px 60px rgba(19, 19, 19, 1);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header{
+    text-align: center;
+    padding:10px 0px;
+    font-size:1.6rem;
 }
+
+
+.header h6{
+    padding-bottom:15px;
+}
+
+.show{
+    display: flex;
+    justify-content: center;
+
+}
+
+.addBox{
+    width:70%;
+    height:40px;    
+    color:#1A2029;
+    font-size: 1.4rem;
+    outline: none;
+    border:0px;
+}
+
+.addBtn{
+    width:10%;
+    background:#B32944;
+    border:1px solid #B32944;
+    outline: none;
+
+}
+
+.addBtn:hover {
+    background:#972239;
+}
+
+.addBtn i {
+    font-size:2rem;
+    color:#fff;
+}
+
+
+
+select{
+    color:#fff;
+    background:#191919;
+    border:0px;
+    
+    box-shadow: 0px 0px 10px rgb(46, 46, 46);
+    /* border:2px solid rgba(46, 46, 46, 0.8); */
+    height:50px;
+    padding:10px;
+    outline:none;
+    font-size: .9rem;
+    margin-top:20px;
+
+}
+
+
+.show-checked,.show-unchecked{
+       
+        width:40px;
+        height: 40px;
+        border-radius: 50%;
+        margin:10px;
+}
+
+.show-checked{
+    background:#DF5889;
+     border:1px solid #DF5889;
+}
+.show-unchecked{
+    background:#586FDF;
+     border:1px solid #586FDF;
+}
+
+
+
+.list-item{
+    height:50px;
+    border:2px solid rgba(30, 30, 30, 5);
+    display:flex;
+    padding:5px;
+    margin:2px 0px;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 2s;
+}
+
+.list-item:hover .del i{
+    display:block;
+}
+
+#check{
+    height:35px;
+    width:35px;
+     border-radius: 50%;
+}
+
+label .fal{
+    color:#DF5889;
+    font-size:1.5rem;
+    font-weight: 900;
+}
+.list-item label {
+    height:30px;
+    width:30px;
+    background:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fa-check-circle {
+font-size: 30px;
+color:#83e85a;
+
+}
+.fa-circle {
+font-size: 30px;
+color:#e41749;
+
+}
+
+.item-name{
+    font-size: 1.3rem;
+    padding:10px;
+    text-align: center;
+}
+
+.del{
+    background:inherit;
+    border:0px;   
+    outline: none;
+    cursor: pointer;
+}
+
+
+.del i{
+    font-size:20px;
+    color:#e41749;
+     display:none;
+    pointer-events: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color:rgb(172, 172, 172);
+  text-decoration-color: #fff;
+  opacity: .3;
+
+}
+
+
+
+#clear {
+     text-decoration:none;
+     color:#fff;
+}
+
+.vanish{
+    display:none;
+}
+
+
+@media(max-width:1024px) {
+
+
+    .del i {
+        font-size: 1.7rem;
+        display: block;
+    }
+}
+
+@media(max-width:414px){
+    .header h1{
+        font-size: 2rem;
+    }
+    .header h6{
+        font-size: .7rem;
+    }
+
+   .addBox{
+       width:80%;
+       height:30px;
+       font-size: .9rem;
+
+   }
+   .addBtn{
+       width:20%;
+       height:30px;
+
+   }
+
+   select {
+       height: 40px;
+       padding: 0px;
+
+   }
+
+   .list-item {
+       height: 50px;
+       border:2px solid rgba(30, 30, 30, 5);
+   }
+
+   .fa-check-circle,.fa-circle{
+       font-size: 1.4rem;
+   }
+
+   .item-name{
+       font-size: .7rem;
+   }
+
+   .del i {
+       font-size: 1rem;
+       display: block;
+   }
+}
+
+
